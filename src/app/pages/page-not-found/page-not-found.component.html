@@ -1,1 +1,30 @@
-<p>page-not-found works!</p>
+<div
+  class="tw-relative tw-h-[900px] tw-flex-1 tw-bg-[url('assets/images/404_background.png')]"
+>
+  <img
+    class="tw-object-cover"
+    src="assets/images/404_background_pattern.png"
+    alt="Banner"
+  />
+  <app-404-svg class="tw-absolute tw-right-[275px] tw-top-[214px]" />
+  <div
+    class="tw-absolute tw-right-[245px] tw-top-[447px] tw-flex tw-flex-col tw-gap-3 tw-text-center"
+  >
+    <h1 class="tw-text-[70px] tw-font-bold tw-text-primary">Page not found</h1>
+    <p class="tw-text-simple tw-text-lg tw-font-semibold tw-tracking-wider">
+      The page you are looking for doesn't exist or has been moved
+    </p>
+  </div>
+  <a
+    routerLink="/"
+    class="tw-absolute tw-right-[520px] tw-top-[630px] tw-flex tw-h-[79px] tw-w-[275px] tw-flex-row tw-items-center tw-justify-center tw-gap-3 tw-rounded-2xl tw-bg-primary tw-py-7 tw-pl-10 tw-pr-12 tw-text-xl tw-font-bold tw-text-[#ffffff]"
+  >
+    Go to Homepage
+    <div
+      class="tw-bg-primary_light tw-flex tw-size-6 tw-items-center tw-justify-center tw-rounded-full"
+    >
+      <i class="pi pi-arrow-right" style="font-size: 0.7rem"></i>
+    </div>
+  </a>
+</div>
+
