@@ -24,7 +24,8 @@
       "~/*": ["./src/app/*", "./dist/app"],
       "@components/*": ["./src/app/components/*"],
       "@interfaces/*": ["./src/app/interfaces/*"],
-      "@shared/*": ["./src/app/shared/*"]
+      "@shared/*": ["./src/app/shared/*"],
+      "@assets/*": ["./src/assets/*"]
     }
   },
   "angularCompilerOptions": {

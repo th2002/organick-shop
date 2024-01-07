@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import type { Config } from 'tailwindcss';
 
 export default {
@@ -19,7 +18,11 @@ export default {
     fontFamily: {
       yellowtail: ['Yellowtail', 'cursive']
     },
-    extend: {}
+    extend: {
+      screens: {
+        '3xl': '1920px'
+      }
+    }
   },
   plugins: []
 } satisfies Config;

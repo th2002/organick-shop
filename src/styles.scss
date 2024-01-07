@@ -32,3 +32,7 @@ body .p-component {
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+.menu-items-hover {
+  @apply tw-relative tw-py-1 after:tw-absolute after:tw-bottom-0 after:tw-left-0 after:tw-h-[3px] after:tw-w-0 after:tw-bg-primary after:tw-transition-all after:tw-duration-300 after:tw-ease-linear hover:after:tw-w-full;
+}

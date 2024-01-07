@@ -1,2 +1,115 @@
-<h2>Header</h2>
+<div class="3xl:tw-px-[162px] tw-py-[69px] sm:tw-px-10 2xl:tw-px-12">
+  <header class="tw-flex tw-items-center tw-justify-between">
+    <div>
+      <a routerLink="/"><img src="assets/images/Logo-full.png" alt="Logo" /></a>
+    </div>
+    <div class="tw-hidden 2xl:tw-block">
+      <ul
+        class="tw-flex tw-w-[564px] tw-justify-between tw-text-xl tw-font-bold tw-text-primary *:tw-cursor-pointer"
+      >
+        <li class="menu-items-hover" routerLink="/">Home</li>
+        <li class="menu-items-hover" routerLink="/about">About</li>
+        <li class="menu-items-hover tw-group/menu tw-relative">
+          Pages <i class="pi pi-chevron-down" style="font-size: 0.8rem"></i>
+          <div
+            class="tw-invisible tw-absolute tw-right-[50%] tw-top-10 tw-translate-x-[50%] group-hover/menu:tw-visible"
+          >
+            <ul
+              class="tw-flex tw-w-52 tw-flex-col tw-rounded-xl tw-py-3 tw-shadow-xl *:tw-h-10 *:tw-text-center *:tw-text-base *:tw-font-bold *:tw-leading-10 *:tw-text-primary"
+            >
+              <a routerLink="/contact-us"
+                ><li class="hover:tw-bg-background-200">Contact us</li></a
+              >
+              <a routerLink="/quanlity-standard"
+                ><li class="hover:tw-bg-background-200">Quality Standard</li></a
+              >
+              <a routerLink="/portfolio-standard"
+                ><li class="hover:tw-bg-background-200">
+                  Portfolio Standard
+                </li></a
+              >
+            </ul>
+          </div>
+        </li>
+        <li class="menu-items-hover" routerLink="/shop">Shop</li>
+        <li class="menu-items-hover" routerLink="/news">News</li>
+      </ul>
+    </div>
+    <div class="flex tw-items-center tw-gap-4">
+      <div
+        class="tw-relative tw-hidden tw-overflow-hidden tw-rounded-[36px] hover:tw-ring-1 hover:tw-ring-background-300 has-[:focus]:tw-ring-1 has-[:focus]:tw-ring-background-300 lg:tw-block"
+      >
+        <input
+          type="text"
+          spellcheck="false"
+          class="3xl:tw-w-[376px] tw-h-[66px] tw-w-72 tw-bg-[#FAFAFA] tw-pl-6 tw-pr-14 tw-text-background-400 focus:tw-border-none focus:tw-outline-none"
+        />
+        <div
+          class="tw-absolute tw-right-1 tw-top-1 tw-flex tw-h-[56px] tw-w-[56px] tw-items-center tw-justify-center tw-rounded-full tw-bg-secondary"
+        >
+          <i
+            class="pi pi-search tw-cursor-pointer"
+            style="font-size: 1.3rem; color: white"
+          ></i>
+        </div>
+      </div>
+      <div
+        class="flex tw-h-[66px] tw-w-[159px] tw-items-center tw-gap-[18px] tw-overflow-hidden tw-rounded-[36px] tw-border-[1px] tw-border-[#E0E0E0] hover:tw-ring-1 hover:tw-ring-background-300"
+      >
+        <div
+          class="tw-ml-1 tw-flex tw-h-[56px] tw-w-[56px] tw-items-center tw-justify-center tw-rounded-full tw-bg-primary"
+        >
+          <i
+            class="pi pi-shopping-cart tw-cursor-pointer"
+            style="font-size: 1.3rem; color: white"
+          ></i>
+        </div>
+        <span class="tw-text-lg tw-font-semibold tw-text-primary"
+          >Cart (0)</span
+        >
+      </div>
+      <div
+        class="tw-flex tw-size-12 tw-cursor-pointer tw-items-center tw-justify-center tw-rounded-full tw-ring-1 tw-ring-background-400"
+      >
+        <i class="pi pi-user" style="font-size: 1.5rem; color: #525c60"></i>
+      </div>
+      <div class="2xl:tw-hidden">
+        <p-sidebar
+          [style]="{ height: 'auto' }"
+          [(visible)]="sidebar"
+          position="top"
+        >
+          <ul
+            class="tw-mx-auto tw-flex tw-h-full tw-w-[50%] tw-flex-col tw-items-center tw-gap-8 tw-text-xl tw-font-bold tw-text-primary *:tw-cursor-pointer *:tw-text-center"
+          >
+            <li class="menu-items-hover tw-w-20" routerLink="/">Home</li>
+            <li class="menu-items-hover tw-w-20" routerLink="/about">About</li>
+            <li
+              class="menu-items-hover tw-w-20"
+              (click)="handleShowPages()"
+              (keydown.enter)="handleShowPages()"
+              tabindex="0"
+            >
+              Pages <i class="pi pi-chevron-down" style="font-size: 0.8rem"></i>
+            </li>
+            @if (showPages) {
+              <li class="menu-items-hover tw-w-40">Contact us</li>
+              <li class="menu-items-hover tw-w-40">Quality Standard</li>
+              <li class="menu-items-hover tw-w-44">Portfolio Standard</li>
+            }
+            <li class="menu-items-hover tw-w-20" routerLink="/shop">Shop</li>
+            <li class="menu-items-hover tw-w-20" routerLink="/">News</li>
+          </ul>
+        </p-sidebar>
+        <p-button
+          [style]="{ background: '#274C5B' }"
+          type="button"
+          class="mr-2"
+          (click)="sidebar = true"
+          icon="pi pi-align-justify"
+        ></p-button>
+      </div>
+    </div>
+  </header>
+</div>
 
