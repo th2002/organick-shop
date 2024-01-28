@@ -1,0 +1,12 @@
+:host ::ng-deep {
+  .p-inputtext {
+    width: 60px;
+    height: 50px;
+  }
+
+  .p-button.p-button-secondary,
+  .p-buttonset.p-button-secondary > .p-button,
+  .p-splitbutton.p-button-secondary > .p-button {
+    background: #274c5b;
+  }
+}

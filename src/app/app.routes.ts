@@ -13,18 +13,38 @@ import { ProfileComponent } from '~/customer/profile/profile.component';
 import { PurchaseHistoryComponent } from '~/customer/purchase-history/purchase-history.component';
 
 import { Routes } from '@angular/router';
+import { AdminDashboardComponent } from '~/admin/admin-dashboard/admin-dashboard.component';
+import { AuthGuard } from '@shared/services/auth.guard';
+import { LayoutAdminComponent } from '@shared/layouts/layout-admin/layout-admin.component';
+import { DefaultLayoutComponent } from '@shared/layouts/default-layout/default-layout.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'signin-signup', component: SigninSignupComponent },
-  { path: 'shop', component: ShopComponent },
-  { path: 'product/:id', component: ProductDetailComponent },
-  { path: 'about', component: AboutUsComponent },
-  { path: 'contact', component: ContactUsComponent },
-  { path: 'posts', component: PostsComponent },
-  { path: 'cart', component: CartDetailComponent },
-  { path: 'payment', component: PaymentComponent },
-  { path: 'profile/:id', component: ProfileComponent },
-  { path: 'purchase/:id', component: PurchaseHistoryComponent },
-  { path: '**', component: PageNotFoundComponent }
+  // Admin dashboard layout
+  {
+    path: 'dashboard',
+    canActivate: [AuthGuard],
+    component: LayoutAdminComponent,
+    children: [{ path: '', component: AdminDashboardComponent }]
+  },
+
+  // Default layout
+  {
+    path: '',
+    component: DefaultLayoutComponent,
+    children: [
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: 'home', component: HomeComponent },
+      { path: 'login-signup', component: SigninSignupComponent },
+      { path: 'shop', component: ShopComponent },
+      { path: 'product/:id', component: ProductDetailComponent },
+      { path: 'about', component: AboutUsComponent },
+      { path: 'contact', component: ContactUsComponent },
+      { path: 'posts', component: PostsComponent },
+      { path: 'cart', component: CartDetailComponent },
+      { path: 'payment', component: PaymentComponent },
+      { path: 'profile/:id', component: ProfileComponent },
+      { path: 'purchase/:id', component: PurchaseHistoryComponent },
+      { path: '**', component: PageNotFoundComponent }
+    ]
+  }
 ];

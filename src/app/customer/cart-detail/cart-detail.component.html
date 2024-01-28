@@ -1,1 +1,104 @@
-<p>cart-detail works!</p>
+<app-banner-page
+  [name_page]="title"
+  [background_url]="background_url"
+  [pattern_url]="pattern_url"
+/>
+
+<app-breadcrumb [items]="slug" />
+
+<div class="tw-mt-8 tw-flex tw-flex-row tw-justify-center tw-gap-6">
+  <div>
+    <div class="card">
+      <p-table
+        *ngIf="products$ | async as products"
+        [value]="products"
+        [tableStyle]="{ 'min-width': '920px' }"
+      >
+        <ng-template pTemplate="header">
+          <tr
+            class="tw-text-sm tw-tracking-[0.42px] tw-text-simple *:tw-uppercase"
+          >
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+            <th>Action</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+          <tr>
+            <td class="tw-flex tw-flex-row tw-items-center tw-gap-5">
+              <img
+                src="{{ product.img }}"
+                alt="product"
+                class="tw-h-[100px] tw-w-[100px]"
+              />
+              <span>{{ product.name }}</span>
+            </td>
+            <td>{{ product.price | currency: 'USD' }}</td>
+            <td>
+              <div class="card flex justify-content-center">
+                <p-inputNumber
+                  [(ngModel)]="product.quantity"
+                  (ngModelChange)="
+                    handleChangeQuantityProduct(product.id, $event)
+                  "
+                  [style]="{ width: '4rem' }"
+                  [showButtons]="true"
+                  buttonLayout="horizontal"
+                  spinnerMode="horizontal"
+                  inputId="horizontal"
+                  decrementButtonClass="p-button-secondary"
+                  incrementButtonClass="p-button-secondary"
+                  incrementButtonIcon="pi pi-plus"
+                  decrementButtonIcon="pi pi-minus"
+                ></p-inputNumber>
+              </div>
+            </td>
+            <td>{{ product.price }}</td>
+            <td>
+              <button
+                (click)="handleDeleteProductInCart(product.id)"
+                class="tw-flex tw-size-6 tw-items-center tw-justify-center tw-rounded-full tw-border-[1px] tw-border-background-300"
+              >
+                <i
+                  class="pi pi-times tw-text-simple"
+                  style="font-size: 0.6rem"
+                ></i>
+              </button>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </div>
+  <div
+    class="tw-h-[320px] tw-w-[424px] tw-rounded-lg tw-border-[1px] tw-border-background-300 tw-p-6"
+  >
+    <h1 class="tw-text-xl tw-font-semibold">Cart Total</h1>
+    <div class="tw-flex tw-w-full tw-flex-row tw-justify-between tw-py-5">
+      <h2 class="tw-text-sm tw-text-simple">Subtotal</h2>
+      <span>{{ total_cart | currency: 'USD' }}</span>
+    </div>
+    <div
+      class="tw-flex tw-w-full tw-flex-row tw-justify-between tw-border-b-[1px] tw-border-t-[1px] tw-border-background-300 tw-py-5"
+    >
+      <h2 class="tw-text-sm tw-text-simple">Shipping</h2>
+      <span>Free</span>
+    </div>
+    <div
+      class="tw-flex tw-w-full tw-flex-row tw-justify-between tw-py-5 tw-text-base tw-font-semibold"
+    >
+      <h2 class="tw-text-simple">Total</h2>
+      <span>{{ total_cart | currency: 'USD' }}</span>
+    </div>
+    <button
+      class="tw-h-[50px] tw-w-full tw-rounded-full tw-bg-primary tw-font-semibold tw-text-[#ffffff] hover:tw-bg-opacity-75"
+    >
+      Proceed to checkout
+    </button>
+  </div>
+</div>
+
+<app-banner-subscribe />
+

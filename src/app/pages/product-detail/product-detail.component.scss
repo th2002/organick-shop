@@ -1,0 +1,24 @@
+:host ::ng-deep {
+  .p-rating .p-rating-item.p-rating-item-active .p-rating-icon {
+    color: orange;
+  }
+
+  .p-inputtext {
+    width: 134px;
+    height: 80px;
+    border: 2px solid #274c5b;
+    border-radius: 16px;
+    text-align: center;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .p-button {
+    background-color: #274c5b;
+    border-radius: 16px;
+    width: 213px;
+    height: 80px;
+  }
+}

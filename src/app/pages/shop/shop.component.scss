@@ -1,0 +1,9 @@
+:host ::ng-deep {
+  .p-inputtext:enabled:focus {
+    box-shadow: 0 0 0 0.1rem #335b6b;
+    border: none;
+  }
+  .p-inputtext:enabled:hover {
+    border-color: #335b6b;
+  }
+}
