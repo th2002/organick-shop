@@ -77,7 +77,7 @@ export class AuthService {
     let result: boolean = false;
     try {
       result = !!token && !this.jwtHelper.isTokenExpired(token);
-    } catch(err) {
+    } catch (err) {
       console.error('An error occurred while checking the token:', err);
     }
     return result;
