@@ -1,1 +1,14 @@
-<p>banner-page works!</p>
+<div class="tw-relative tw-mb-10 tw-h-[450px] tw-w-full">
+  <img class="tw-z-0" [src]="background_url" alt="" />
+  <img
+    class="tw-absolute tw-top-0 tw-z-50"
+    [src]="pattern_url"
+    alt="pattern_background"
+  />
+  <h1
+    class="tw-absolute tw-left-1/2 tw-top-1/2 tw-z-50 -tw-translate-x-1/2 -tw-translate-y-1/2 tw-text-[70px] tw-font-extrabold tw-text-primary"
+  >
+    {{ name_page }}
+  </h1>
+</div>
+

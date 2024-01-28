@@ -1,1 +1,73 @@
-<p>card-product works!</p>
+<div
+  class="tw-relative tw-flex tw-h-[495px] tw-w-[335px] tw-animate-fadeIn tw-flex-col tw-rounded-[30px] tw-bg-background-200"
+>
+  <div
+    [ngClass]="{
+      'tw-w-[96px]': cate === 'Vegetable',
+      'tw-w-16': cate === 'Fresh' || cate === 'Nuts',
+      'tw-w-[73px]': cate === 'Health' || cate === 'Millets'
+    }"
+    class="tw-absolute tw-left-8 tw-top-8 tw-flex tw-h-8 tw-items-center tw-justify-center tw-rounded-lg tw-bg-primary tw-px-3"
+  >
+    <span class="tw-text-sm tw-font-semibold tw-text-[#ffffff]">{{
+      cate
+    }}</span>
+  </div>
+  <a routerLink="/product/{{ prd_id }}">
+    <img
+      [src]="image"
+      alt="product"
+      class="tw-absolute tw-left-[50%] tw-top-[50%] -tw-translate-x-[50%] -tw-translate-y-[50%] tw-scale-90 tw-object-cover"
+    />
+  </a>
+  <div class="tw-absolute tw-left-[30px] tw-top-[400px]">
+    <span class="tw-text-xl tw-font-semibold tw-text-primary">{{ name }}</span>
+  </div>
+  <div
+    class="tw-absolute tw-bottom-0 tw-mt-3 tw-w-full tw-px-[30px] tw-pb-4 tw-pt-3"
+  >
+    <div
+      class="tw-flex tw-w-full tw-justify-between tw-border-t-[1px] tw-border-background-300 tw-pt-3"
+    >
+      <div class="tw-flex tw-items-center tw-gap-3">
+        <span
+          class="tw-text-sm tw-font-semibold tw-text-[#B8B8B8] tw-line-through"
+          >{{ price_sale | currency: 'USD' }}</span
+        >
+        <span class="tw-text-lg tw-font-bold tw-text-primary">{{
+          price | currency: 'USD'
+        }}</span>
+      </div>
+      <div class="tw-flex tw-items-center">
+        <p-rating
+          [(ngModel)]="rating"
+          [readonly]="true"
+          [cancel]="false"
+        ></p-rating>
+      </div>
+    </div>
+  </div>
+  <div
+    class="tw-absolute tw-right-[30px] tw-top-9 tw-flex tw-items-center tw-gap-2 tw-font-semibold tw-text-simple"
+  >
+    <i class="pi pi-eye" style="font-size: 1rem"></i>
+    <span>{{ views }}</span>
+  </div>
+  <div
+    class="tw-absolute tw-right-[30px] tw-top-16 tw-flex tw-items-center tw-gap-2 tw-font-semibold tw-text-simple"
+  >
+    <i class="pi pi-shopping-cart" style="font-size: 1rem"></i>
+    <span>{{ quantity_buy }}</span>
+  </div>
+  <p-toast></p-toast>
+  <button
+    type="button"
+    pButton
+    pRipple
+    (click)="HandleAddToCart()"
+    class="p-button-success tw-absolute tw-right-[30px] tw-top-[385px] tw-flex tw-size-10 tw-cursor-pointer tw-items-center tw-justify-center tw-rounded-full tw-bg-primary_light hover:tw-bg-opacity-75"
+  >
+    <i class="pi pi-shopping-cart" style="font-size: 1rem; color: white"></i>
+  </button>
+</div>
+

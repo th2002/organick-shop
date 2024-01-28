@@ -1,1 +1,73 @@
-<p>product-detail works!</p>
+<app-banner-page
+  [name_page]="title"
+  [background_url]="background_url"
+  [pattern_url]="pattern_url"
+/>
+
+<app-breadcrumb [items]="slug" />
+
+<div class="tw-mx-auto tw-flex tw-w-[70%] tw-flex-row tw-gap-[88px]">
+  <div class="tw-relative">
+    <img
+      [src]="product.productImageUrl"
+      [alt]="product.productName"
+      class="tw-h-p[600px] tw-w-[600px] tw-object-cover"
+    />
+    <div
+      [ngClass]="{
+        'tw-w-[96px]': product.cate === 'Vegetable',
+        'tw-w-16': product.cate === 'Fresh' || product.cate === 'Nuts',
+        'tw-w-[73px]': product.cate === 'Health' || product.cate === 'Millets'
+      }"
+      class="tw-absolute tw-left-8 tw-top-8 tw-flex tw-h-8 tw-items-center tw-justify-center tw-rounded-lg tw-bg-primary tw-px-3"
+    >
+      <span class="tw-text-sm tw-font-semibold tw-text-[#ffffff]">{{
+        product.cate
+      }}</span>
+    </div>
+  </div>
+  <div class="tw-flex tw-flex-col tw-justify-center">
+    <h1 class="tw-text-[40px] tw-font-semibold tw-text-primary">
+      {{ product.productName }}
+    </h1>
+    <div class="tw-my-2 tw-flex tw-items-center">
+      <p-rating
+        [(ngModel)]="product.productRating"
+        [readonly]="true"
+        [cancel]="false"
+      ></p-rating>
+    </div>
+    <div class="tw-flex tw-items-center tw-gap-3">
+      <span
+        class="tw-text-xl tw-font-semibold tw-text-[#B8B8B8] tw-line-through"
+        >{{ product.productPriceSale | currency: 'USD' }}</span
+      >
+      <span class="tw-text-2xl tw-font-bold tw-text-primary">{{
+        product.productPrice | currency: 'USD'
+      }}</span>
+    </div>
+    <p class="tw-mb-9 tw-mt-7 tw-text-lg tw-text-simple">
+      Simply dummy text of the printing and typesetting industry. Lorem had
+      ceased to been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley.
+    </p>
+    <div class="tw-flex tw-flex-row tw-items-center tw-gap-6">
+      <span class="tw-text-xl tw-font-bold tw-text-primary">Quantity:</span>
+
+      <div class="card">
+        <input type="text" pInputText [(ngModel)]="quantity_input_value" />
+      </div>
+
+      <div class="card">
+        <p-button
+          label="Add to cart"
+          icon="pi pi-arrow-right"
+          iconPos="right"
+        ></p-button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-banner-subscribe />
+

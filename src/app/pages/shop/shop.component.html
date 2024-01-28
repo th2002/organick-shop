@@ -1,1 +1,122 @@
-<p>shop works!</p>
+<app-banner-page
+  [name_page]="title"
+  [background_url]="background_url"
+  [pattern_url]="pattern_url"
+/>
+
+<app-breadcrumb [items]="slug" />
+
+<div class="card tw-mb-5 tw-mt-5">
+  <span class="p-input-icon-left">
+    <i class="pi pi-search"></i>
+    <input
+      type="text"
+      pInputText
+      [(ngModel)]="searchValue"
+      (input)="handleFilterPrd()"
+      placeholder="Search product.."
+      class="tw-text-simple placeholder:tw-text-sm"
+    />
+  </span>
+</div>
+
+<div class="tw-mb-6 tw-flex tw-gap-4">
+  <div class="card">
+    <p-dropdown
+      [options]="all_cate_data"
+      [(ngModel)]="cate_option"
+      (ngModelChange)="handleFilterPrd()"
+      optionLabel="cateName"
+      [showClear]="true"
+      placeholder="Select a Category"
+    ></p-dropdown>
+  </div>
+
+  <div class="card">
+    <p-dropdown
+      [options]="price_option"
+      [(ngModel)]="price_selected"
+      (ngModelChange)="handleFilterPrd()"
+      optionLabel="title"
+      [showClear]="true"
+      placeholder="Sort by Price"
+    ></p-dropdown>
+  </div>
+
+  <div class="card">
+    <p-dropdown
+      [options]="rating_option"
+      [(ngModel)]="rating_selected"
+      (ngModelChange)="handleFilterPrd()"
+      optionLabel="title"
+      [showClear]="true"
+      placeholder="Sort by Rating"
+    ></p-dropdown>
+  </div>
+
+  <div class="card">
+    <p-dropdown
+      [options]="views_option"
+      [(ngModel)]="views_selected"
+      (ngModelChange)="handleFilterPrd()"
+      optionLabel="title"
+      [showClear]="true"
+      placeholder="Sort by View"
+    ></p-dropdown>
+  </div>
+
+  <div class="card">
+    <p-dropdown
+      [options]="quantity_buy_option"
+      [(ngModel)]="quantity_buy_selected"
+      (ngModelChange)="handleFilterPrd()"
+      optionLabel="title"
+      [showClear]="true"
+      placeholder="Sort by Quantity Buy"
+    ></p-dropdown>
+  </div>
+</div>
+
+<div class="tw-mb-10 tw-flex tw-flex-wrap tw-gap-5">
+  @for (prd of all_product_data; track prd) {
+    @if (!loaded) {
+      <div
+        class="tw-relative tw-flex tw-h-[255px] tw-w-[335px] tw-flex-col tw-rounded-[30px] tw-px-4"
+      >
+        <p-skeleton styleClass="mb-2"></p-skeleton>
+        <p-skeleton width="10rem" styleClass="mb-2"></p-skeleton>
+        <p-skeleton width="5rem" styleClass="mb-2"></p-skeleton>
+        <p-skeleton height="2rem" styleClass="mb-2"></p-skeleton>
+        <p-skeleton width="10rem" height="4rem"></p-skeleton>
+      </div>
+    } @else if (loaded) {
+      <app-card-product
+        [prd_id]="prd.id"
+        [cate]="prd.cate"
+        [image]="prd.productImageUrl"
+        [name]="prd.productName"
+        [price_sale]="prd.productPriceSale"
+        [price]="prd.productPrice"
+        [rating]="prd.productRating"
+        [views]="prd.productViews"
+        [quantity_buy]="prd.productBuyQuantity"
+      />
+    }
+  }
+</div>
+
+@if (message !== '') {
+  <div class="tw-mb-10 tw-text-center">
+    <h1 class="tw-text-lg tw-font-semibold tw-text-simple">
+      {{ message }}
+    </h1>
+  </div>
+}
+
+<app-paginator
+  [total_products]="length_data"
+  (pageChange)="handlePageChange($event)"
+/>
+
+<app-banner-subscribe />
+

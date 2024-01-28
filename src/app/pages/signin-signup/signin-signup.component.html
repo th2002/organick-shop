@@ -1,1 +1,152 @@
-<p>signin-signup works!</p>
+<app-banner-page
+  [name_page]="title"
+  [background_url]="background_url"
+  [pattern_url]="pattern_url"
+/>
+
+<app-breadcrumb [items]="slug" />
+
+<div class="w-full flex tw-justify-center tw-items-center">
+  @if (form_login) {
+    <form [formGroup]="loginFormGroup" (ngSubmit)="submitLoginForm(loginFormGroup)" class="tw-shadow-2xl tw-rounded-2xl tw-flex tw-flex-col justify-content-between tw-items-center tw-p-6 tw-w-[520px] tw-h-[430px] tw-animate-fadeIn tw-mt-10" >
+      <h1 class="tw-text-[32px] tw-font-semibold tw-text-primary">Login</h1>
+
+      <div class="card w-full">
+        <span class="p-float-label w-full ">
+            <input formControlName="login_email" pInputText id="username" class="w-full" spellcheck="false" autocomplete="false"/>
+            <label for="username">Email</label>
+        </span>
+
+        <div
+          class="tw-mt-3"
+          *ngIf="
+          loginFormGroup.get('login_email')?.hasError('required') &&
+          (loginFormGroup.get('login_email')?.dirty ||
+            loginFormGroup.get('login_email')?.touched)
+        "
+        >
+          <span style="color: red">Email is required</span>
+        </div>
+
+        <div
+          class="tw-mt-3"
+          *ngIf="
+          loginFormGroup.get('login_email')?.hasError('email') &&
+          (loginFormGroup.get('login_email')?.dirty ||
+            loginFormGroup.get('login_email')?.touched)
+        "
+        >
+          <span style="color: red">Please enter the correct email format</span>
+        </div>
+      </div>
+
+      <div class="card w-full">
+        <span class="p-float-label w-full">
+            <p-password formControlName="login_password"  [feedback]="false" [toggleMask]="true" class="w-full" ></p-password>
+            <label for="password">Password</label>
+        </span>
+
+        <div
+          class="tw-mt-3"
+          *ngIf="
+          loginFormGroup.get('login_password')?.hasError('required') &&
+          (loginFormGroup.get('login_password')?.dirty ||
+            loginFormGroup.get('login_password')?.touched)
+        "
+        >
+          <span style="color: red">Password is required</span>
+        </div>
+      </div>
+
+      <div class="w-full tw-text-end">
+        <p class="tw-text-gray-500 cursor-pointer">Forgot password?</p>
+      </div>
+
+      <span class="p-buttonset w-full">
+        <button pButton pRipple class="tw-rounded-full tw-bg-primary hover:tw-bg-opacity-75 text-white font-semibold tw-w-full tw-h-[45px]">Login</button>
+      </span>
+
+      <p class="tw-text-gray-500">Don’t have account? <span (click)="showFormSignUp()" class="tw-font-semibold tw-text-black cursor-pointer">Register</span></p>
+    </form>
+  }
+
+  @if (form_sign_up) {
+    <form [formGroup]="signupFormGroup" (ngSubmit)="submitSignUpForm(signupFormGroup)" class="tw-shadow-2xl tw-rounded-2xl tw-flex tw-flex-col justify-content-between tw-items-center tw-p-6 tw-w-[520px] tw-h-[550px] tw-animate-fadeIn tw-mt-10" >
+      <h1 class="tw-text-[32px] tw-font-semibold tw-text-primary">Sign up</h1>
+
+      <div class="card w-full">
+        <span class="p-float-label w-full ">
+            <input formControlName="signup_email" pInputText id="email" class="w-full" spellcheck="false" autocomplete="false"/>
+            <label for="email">Email</label>
+        </span>
+
+        <div
+          class="tw-mt-3"
+          *ngIf="
+          signupFormGroup.get('signup_email')?.hasError('required') &&
+          (signupFormGroup.get('signup_email')?.dirty ||
+            signupFormGroup.get('signup_email')?.touched)
+        "
+        >
+          <span style="color: red">Email is required</span>
+        </div>
+
+        <div
+          class="tw-mt-3"
+          *ngIf="
+          signupFormGroup.get('signup_email')?.hasError('email') &&
+          (signupFormGroup.get('signup_email')?.dirty ||
+            signupFormGroup.get('signup_email')?.touched)
+        "
+        >
+          <span style="color: red">Please enter the correct email format</span>
+        </div>
+      </div>
+
+      <div class="card w-full">
+        <span class="p-float-label w-full">
+            <p-password formControlName="signup_password" id="password"  [feedback]="false" [toggleMask]="true" class="w-full" ></p-password>
+            <label for="password">Password</label>
+        </span>
+
+        <div
+          class="tw-mt-3"
+          *ngIf="
+          signupFormGroup.get('signup_password')?.hasError('required') &&
+          (signupFormGroup.get('signup_password')?.dirty ||
+            signupFormGroup.get('signup_password')?.touched)
+        "
+        >
+          <span style="color: red">Password is required</span>
+        </div>
+      </div>
+
+      <div class="card w-full">
+        <span class="p-float-label w-full">
+            <p-password formControlName="signup_confirm_password" id="confirmPassword"  [feedback]="false" [toggleMask]="true" class="w-full" ></p-password>
+            <label for="confirmPassword">Confirm Password</label>
+        </span>
+
+        <div
+          class="tw-mt-3"
+          *ngIf="
+          signupFormGroup.get('signup_confirm_password')?.hasError('required') &&
+          (signupFormGroup.get('signup_confirm_password')?.dirty ||
+            signupFormGroup.get('signup_confirm_password')?.touched)
+        "
+        >
+          <span style="color: red">Please confirm password</span>
+        </div>
+      </div>
+
+      <span class="p-buttonset w-full">
+        <button [disabled]="!signupFormGroup.valid" pButton pRipple class="tw-rounded-full tw-bg-primary hover:tw-bg-opacity-75 text-white font-semibold tw-w-full tw-h-[45px]">Sign Up</button>
+      </span>
+
+      <p class="tw-text-gray-500">Don’t have account? <span (click)="showFormLogin()" class="tw-font-semibold tw-text-black cursor-pointer">Login</span></p>
+    </form>
+
+  }
+
+  <p-toast></p-toast>
+</div>

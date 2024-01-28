@@ -8,5 +8,239 @@
       "id": 2,
       "name": "Thomas"
     }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "cateName": "Vegetable"
+    },
+    {
+      "id": 2,
+      "cateName": "Fresh"
+    },
+    {
+      "id": 3,
+      "cateName": "Millets"
+    },
+    {
+      "id": 4,
+      "cateName": "Health"
+    },
+    {
+      "id": 5,
+      "cateName": "Nuts"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "cate": "Vegetable",
+      "productName": "Calabrese Broccoli",
+      "productImageUrl": "assets/images/products/Calabrese_Broccoli.png",
+      "productPriceSale": 20,
+      "productPrice": 13,
+      "productRating": 5,
+      "productBuyQuantity": 566,
+      "productViews": 1120,
+      "productDescription": "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+      "release_date": "08/01/2024",
+      "update_date": ""
+    },
+    {
+      "id": 2,
+      "cate": "Fresh",
+      "productName": "Fresh Banana Fruites",
+      "productImageUrl": "assets/images/products/Fresh_Banana_Fruites.png",
+      "productPriceSale": 20,
+      "productPrice": 14,
+      "productRating": 4,
+      "productBuyQuantity": 456,
+      "productViews": 600,
+      "productDescription": "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+      "release_date": "08/01/2024",
+      "update_date": ""
+    },
+    {
+      "id": 3,
+      "cate": "Millets",
+      "productName": "White Nuts",
+      "productImageUrl": "assets/images/products/White_Nuts.png",
+      "productPriceSale": 20,
+      "productPrice": 15,
+      "productRating": 4.9,
+      "productBuyQuantity": 1533,
+      "productViews": 1760,
+      "productDescription": "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+      "release_date": "08/01/2024",
+      "update_date": ""
+    },
+    {
+      "id": 4,
+      "cate": "Vegetable",
+      "productName": "Vegan Red Tomato",
+      "productImageUrl": "assets/images/products/Vegan_Red_Tomato.png",
+      "productPriceSale": 20,
+      "productPrice": 17,
+      "productRating": 5,
+      "productBuyQuantity": 322,
+      "productViews": 820,
+      "productDescription": "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+      "release_date": "08/01/2024",
+      "update_date": ""
+    },
+    {
+      "id": 5,
+      "cate": "Health",
+      "productName": "Mung Bean",
+      "productImageUrl": "assets/images/products/Mung_Bean.png",
+      "productPriceSale": 20,
+      "productPrice": 11,
+      "productRating": 3,
+      "productBuyQuantity": 48,
+      "productViews": 100,
+      "productDescription": "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+      "release_date": "08/01/2024",
+      "update_date": ""
+    },
+    {
+      "id": 6,
+      "cate": "Nuts",
+      "productName": "Brown Hazelnut",
+      "productImageUrl": "assets/images/products/Brown_Hazelnut.png",
+      "productPriceSale": 20,
+      "productPrice": 12,
+      "productRating": 3.6,
+      "productBuyQuantity": 498,
+      "productViews": 765,
+      "productDescription": "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+      "release_date": "08/01/2024",
+      "update_date": ""
+    },
+    {
+      "id": 7,
+      "cate": "Fresh",
+      "productName": "Eggs",
+      "productImageUrl": "assets/images/products/Eggs.png",
+      "productPriceSale": 20,
+      "productPrice": 17,
+      "productRating": 5,
+      "productBuyQuantity": 4865,
+      "productViews": 5632,
+      "productDescription": "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+      "release_date": "08/01/2024",
+      "update_date": ""
+    },
+    {
+      "id": 8,
+      "cate": "Fresh",
+      "productName": "Zelco Suji Elaichi Rusk",
+      "productImageUrl": "assets/images/products/Zelco_Suji_Elaichi_Rusk.png",
+      "productPriceSale": 20,
+      "productPrice": 13,
+      "productRating": 5,
+      "productBuyQuantity": 965,
+      "productViews": 1120,
+      "productDescription": "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+      "release_date": "08/01/2024",
+      "update_date": ""
+    },
+    {
+      "id": 9,
+      "cate": "Vegetable",
+      "productName": "Cucumber",
+      "productImageUrl": "assets/images/products/Cucumber.png",
+      "productPriceSale": 20,
+      "productPrice": 11,
+      "productRating": 5,
+      "productBuyQuantity": 632,
+      "productViews": 865,
+      "productDescription": "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+      "release_date": "08/01/2024",
+      "update_date": ""
+    },
+    {
+      "id": 10,
+      "cate": "Vegetable",
+      "productName": "Pumpkin",
+      "productImageUrl": "assets/images/products/pumpkin.png",
+      "productPriceSale": 20,
+      "productPrice": 12,
+      "productRating": 5,
+      "productBuyQuantity": 398,
+      "productViews": 600,
+      "productDescription": "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+      "release_date": "08/01/2024",
+      "update_date": ""
+    },
+    {
+      "id": 11,
+      "cate": "Vegetable",
+      "productName": "Onion",
+      "productImageUrl": "assets/images/products/Onion.png",
+      "productPriceSale": 20,
+      "productPrice": 17,
+      "productRating": 4,
+      "productBuyQuantity": 563,
+      "productViews": 999,
+      "productDescription": "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+      "release_date": "08/01/2024",
+      "update_date": ""
+    },
+    {
+      "id": 12,
+      "cate": "Vegetable",
+      "productName": "Cabbage",
+      "productImageUrl": "assets/images/products/Cabbage.png",
+      "productPriceSale": 20,
+      "productPrice": 17,
+      "productRating": 5,
+      "productBuyQuantity": 855,
+      "productViews": 1120,
+      "productDescription": "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+      "release_date": "08/01/2024",
+      "update_date": ""
+    },
+    {
+      "id": 13,
+      "cate": "Health",
+      "productName": "Spinach",
+      "productImageUrl": "assets/images/products/Spinach.png",
+      "productPriceSale": 20,
+      "productPrice": 11,
+      "productRating": 3,
+      "productBuyQuantity": 456,
+      "productViews": 789,
+      "productDescription": "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+      "release_date": "08/01/2024",
+      "update_date": ""
+    },
+    {
+      "id": 14,
+      "cate": "Fresh",
+      "productName": "Fresh Corn",
+      "productImageUrl": "assets/images/products/Fresh_Corn.png",
+      "productPriceSale": 20,
+      "productPrice": 17,
+      "productRating": 5,
+      "productBuyQuantity": 222,
+      "productViews": 356,
+      "productDescription": "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+      "release_date": "08/01/2024",
+      "update_date": ""
+    },
+    {
+      "id": 15,
+      "cate": "Fresh",
+      "productName": "Organic Almonds",
+      "productImageUrl": "assets/images/products/Organic_Almonds.png",
+      "productPriceSale": 20,
+      "productPrice": 15,
+      "productRating": 5,
+      "productBuyQuantity": 6654,
+      "productViews": 8900,
+      "productDescription": "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+      "release_date": "08/01/2024",
+      "update_date": ""
+    }
   ]
 }
