@@ -13,10 +13,12 @@ import { ProfileComponent } from '~/customer/profile/profile.component';
 import { PurchaseHistoryComponent } from '~/customer/purchase-history/purchase-history.component';
 
 import { Routes } from '@angular/router';
-import { AdminDashboardComponent } from '~/admin/admin-dashboard/admin-dashboard.component';
+import { AdminDashboardComponent } from '~/admin/components/admin-dashboard/admin-dashboard.component';
 import { AuthGuard } from '@shared/services/auth.guard';
 import { LayoutAdminComponent } from '@shared/layouts/layout-admin/layout-admin.component';
 import { DefaultLayoutComponent } from '@shared/layouts/default-layout/default-layout.component';
+import { ProductsCrudComponent } from '@admin/components/products-crud/products-crud.component';
+import { UsersCrudComponent } from '@admin/components/users-crud/users-crud.component';
 
 export const routes: Routes = [
   // Admin dashboard layout
@@ -24,7 +26,12 @@ export const routes: Routes = [
     path: 'dashboard',
     canActivate: [AuthGuard],
     component: LayoutAdminComponent,
-    children: [{ path: '', component: AdminDashboardComponent }]
+    children: [
+      { path: '', component: AdminDashboardComponent },
+      { path: 'products', component: ProductsCrudComponent },
+      { path: 'users', component: UsersCrudComponent },
+      { path: '', component: AdminDashboardComponent }
+    ]
   },
 
   // Default layout
