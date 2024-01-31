@@ -16,7 +16,7 @@ export class InvoiceService {
   get_all_invoices(): Observable<any> {
     return this.httpMethod.get(this.invoice_url);
   }
-  add_new_invoice(invoice_dto: IInvoice): Observable<any> {
+  add_new_invoice(invoice_dto: any): Observable<any> {
     return this.httpMethod.post(this.invoice_url, invoice_dto);
   }
 
