@@ -1,0 +1,57 @@
+<div class="tw-pb-10">
+  <div class="card tw-border-[1px] tw-rounded-2xl tw-overflow-hidden">
+    <p-tabView class="tw-h-[500px]">
+      <p-tabPanel header="Info">
+        <ul class="*:tw-mt-5">
+          <li><i class="pi pi-lock tw-mr-5 tw-text-orange-500" style="font-size: 1rem"></i> {{invoice.id}}</li>
+          <li><i class="pi pi-calendar tw-mr-5 tw-text-fuchsia-400" style="font-size: 1rem"></i> {{invoice.date}}</li>
+          <li><i class="pi pi-info-circle tw-mr-5 tw-text-cyan-500" style="font-size: 1rem"></i> {{invoice.status}}</li>
+          <li><i class="pi pi-wallet tw-mr-5 tw-text-emerald-500" style="font-size: 1rem"></i> {{invoice.total | currency: 'USD'}}</li>
+        </ul>
+      </p-tabPanel>
+      <p-tabPanel header="Customer">
+        <ul class="*:tw-mt-5">
+          <li><i class="pi pi-info-circle tw-mr-5 tw-text-orange-500" style="font-size: 1rem"></i> {{invoice.customer.name}}</li>
+          <li><i class="pi pi-envelope tw-mr-5 tw-text-fuchsia-400" style="font-size: 1rem"></i> {{invoice.customer.email}}</li>
+          <li><i class="pi pi-truck tw-mr-5 tw-text-cyan-500" style="font-size: 1rem"></i> {{invoice.customer.address}}</li>
+        </ul>
+      </p-tabPanel>
+      <p-tabPanel header="Oder list">
+
+        <div class="card">
+          <p-dataView #dv [value]="invoice.items">
+            <ng-template pTemplate="list" let-invoices>
+              <div class="grid grid-nogutter">
+                <div class="col-12" *ngFor="let item of invoices; let first = first">
+                  <div class="flex flex-column xl:flex-row xl:align-items-start p-4 gap-4" [ngClass]="{ 'border-top-1 surface-border': !first }">
+                    <img class="w-9 sm:w-16rem xl:w-10rem shadow-2 block xl:block mx-auto border-round" [src]="item.image" [alt]="item.name" />
+                    <div class="flex flex-column sm:flex-row justify-content-between align-items-center xl:align-items-start flex-1 gap-4">
+                      <div class="flex flex-column align-items-center sm:align-items-start gap-3">
+                        <div class="text-xl font-bold text-900">{{ item.productId }}</div>
+                        <div class="flex align-items-center gap-3">
+                                    <span class="flex align-items-center gap-2">
+                                        <i class="pi pi-tag"></i>
+                                        <span class="font-semibold">{{ item.cate }}</span>
+                                    </span>
+                        </div>
+                        <div class="flex align-items-center gap-3">
+                                    <span class="flex align-items-center gap-2">
+                                        <i class="pi pi-box"></i>
+                                        <span class="font-semibold">{{ item.quantity }}</span>
+                                    </span>
+                        </div>
+                      </div>
+                      <div class="flex sm:flex-column align-items-center sm:align-items-end gap-3 sm:gap-2">
+                        <span class="text-xl font-semibold">{{ '$' + item.unitPrice }}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </p-dataView>
+        </div>
+      </p-tabPanel>
+    </p-tabView>
+  </div>
+</div>
