@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartModule } from 'primeng/chart';
-import { ChartDataset, ChartOptions } from "chart.js";
+import { ChartDataset, ChartOptions } from 'chart.js';
+import { InvoiceService } from '@shared/services/invoice.service';
+import { IInvoice } from '@interfaces/i-invoice';
 @Component({
   selector: 'app-revenue-chart',
   standalone: true,
@@ -10,8 +12,11 @@ import { ChartDataset, ChartOptions } from "chart.js";
 })
 export class RevenueChartComponent implements OnInit {
   data: { labels: string[]; datasets: ChartDataset[] } | undefined;
-
   options: ChartOptions | undefined;
+
+  invoices!: IInvoice[];
+  data_chart: number[] = [];
+  constructor(private invoice_service: InvoiceService) {}
 
   ngOnInit() {
     const documentStyle = getComputedStyle(document.documentElement);
@@ -21,33 +26,35 @@ export class RevenueChartComponent implements OnInit {
     );
     const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
 
-    this.data = {
-      labels: [
-        'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
-        'July',
-        'August',
-        'September',
-        'October',
-        'November',
-        'December'
-      ],
-      datasets: [
-        {
-          label: 'Revenue',
-          backgroundColor: '#22a6b3',
-          borderColor: documentStyle.getPropertyValue('--blue-500'),
-          data: [
-            6500, 5900, 5000, 4100, 7600, 5500, 4000, 6600, 4500, 3000, 2000,
-            7800
-          ]
-        }
-      ]
-    };
+    this.invoice_service.get_all_invoices().subscribe(data => {
+      this.invoices = data;
+      this.filter_invoices();
+
+      this.data = {
+        labels: [
+          'January',
+          'February',
+          'March',
+          'April',
+          'May',
+          'June',
+          'July',
+          'August',
+          'September',
+          'October',
+          'November',
+          'December'
+        ],
+        datasets: [
+          {
+            label: 'Revenue',
+            backgroundColor: '#22a6b3',
+            borderColor: documentStyle.getPropertyValue('--blue-500'),
+            data: [...this.data_chart]
+          }
+        ]
+      };
+    });
 
     this.options = {
       maintainAspectRatio: false,
@@ -77,7 +84,7 @@ export class RevenueChartComponent implements OnInit {
             }
           },
           grid: {
-            color: surfaceBorder,
+            color: surfaceBorder
           }
         },
         y: {
@@ -85,12 +92,30 @@ export class RevenueChartComponent implements OnInit {
             color: textColorSecondary
           },
           grid: {
-            color: surfaceBorder,
+            color: surfaceBorder
           },
           suggestedMin: 0,
-          suggestedMax: 8000
+          suggestedMax: 2500
         }
       }
     };
+  }
+
+  filter_invoices() {
+    const filtered: IInvoice[] = this.invoices?.filter(
+      item => item.status === 'Done'
+    );
+    for (let i = 1; i <= 12; i++) {
+      const monthString: string = i < 10 ? `0${i}` : `${i}`;
+      const invoicesByMonth: IInvoice[] = filtered.filter(item =>
+        item.date.includes(`-${monthString}-`)
+      );
+      const totalAmountByMonth: number = invoicesByMonth.reduce(
+        (pre, cur) => pre + cur.total,
+        0
+      );
+
+      this.data_chart[i - 1] = totalAmountByMonth;
+    }
   }
 }

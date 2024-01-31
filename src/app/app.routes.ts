@@ -19,8 +19,8 @@ import { LayoutAdminComponent } from '@shared/layouts/layout-admin/layout-admin.
 import { DefaultLayoutComponent } from '@shared/layouts/default-layout/default-layout.component';
 import { ProductsCrudComponent } from '@admin/components/products-crud/products-crud.component';
 import { UsersCrudComponent } from '@admin/components/users-crud/users-crud.component';
-import { AddProductComponent } from "@admin/components/products-crud/add-product/add-product.component";
-import { EditProductComponent } from "@admin/components/products-crud/edit-product/edit-product.component";
+import { AddProductComponent } from '@admin/components/products-crud/add-product/add-product.component';
+import { EditProductComponent } from '@admin/components/products-crud/edit-product/edit-product.component';
 
 export const routes: Routes = [
   // Admin dashboard layout
@@ -31,10 +31,11 @@ export const routes: Routes = [
     children: [
       { path: '', component: AdminDashboardComponent },
       { path: 'products', component: ProductsCrudComponent },
-      { path: 'crud',
+      {
+        path: 'crud',
         children: [
-          { path: "add-prd", component: AddProductComponent },
-          { path: "edit-prd/:id", component: EditProductComponent }
+          { path: 'add-prd', component: AddProductComponent },
+          { path: 'edit-prd/:id', component: EditProductComponent }
         ]
       },
       { path: 'users', component: UsersCrudComponent },

@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
+import { iProduct } from '@interfaces/iProduct';
+import { ProductService } from '@shared/services/product.service';
 
 @Component({
   selector: 'app-oder-list',
@@ -9,67 +11,23 @@ import { TableModule } from 'primeng/table';
   templateUrl: './oder-list.component.html',
   styleUrl: './oder-list.component.scss'
 })
-export class OderListComponent {
-  customers = [
-    {
-      Name: 'James Butt',
-      Country: 'Algeria',
-      Company: 'Benton, John B Jr',
-      Representative: 'Ioni Bowcher'
-    },
-    {
-      Name: 'Josephine Darakjy',
-      Country: 'Egypt',
-      Company: 'Chanay, Jeffrey A Esq',
-      Representative: 'Amy Elsner'
-    },
-    {
-      Name: 'Art Venere',
-      Country: 'Panama',
-      Company: 'Chemel, James L Cpa',
-      Representative: 'Asiya Javayant'
-    },
-    {
-      Name: 'Lenna Paprocki',
-      Country: 'Slovenia',
-      Company: 'Feltz Printing Service',
-      Representative: 'Xuxue Feng'
-    },
-    {
-      Name: 'Donette Foller',
-      Country: 'South Africa',
-      Company: 'Printing Dimensions',
-      Representative: 'Asiya Javayant'
-    },
-    {
-      Name: 'Simona Morasca',
-      Country: 'Egypt',
-      Company: 'Chapman, Ross E Esq',
-      Representative: 'Ivan Magalhaes'
-    },
-    {
-      Name: 'Mitsue Tollner',
-      Country: 'Paraguay',
-      Company: 'Morlong Associates',
-      Representative: 'Ivan Magalhaes'
-    },
-    {
-      Name: 'Leota Dilliard',
-      Country: 'Serbia',
-      Company: 'Commercial Press',
-      Representative: 'Onyama Limba'
-    },
-    {
-      Name: 'Sage Wieser',
-      Country: 'Egypt',
-      Company: 'Truhlar And Truhlar Attys',
-      Representative: 'Ivan Magalhaes'
-    },
-    {
-      Name: 'Kris Marrier',
-      Country: 'Mexico',
-      Company: 'King, Christopher A Esq',
-      Representative: 'Onyama Limba'
-    }
-  ];
+export class OderListComponent implements OnInit {
+  products!: iProduct[];
+
+  constructor(private prd_service: ProductService) {}
+
+  ngOnInit() {
+    this.handle_get_all_prd();
+  }
+
+  handle_get_all_prd() {
+    this.prd_service.allProduct().subscribe(data => {
+      const data_sorted = data.sort((a: iProduct, b: iProduct) => {
+        const a_sales = a.productBuyQuantity;
+        const b_sales = b.productBuyQuantity;
+        return b_sales - a_sales;
+      });
+      this.products = data_sorted;
+    });
+  }
 }
