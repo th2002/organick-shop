@@ -8,7 +8,7 @@ import { provideStore } from '@ngrx/store';
 import { reducers, metaReducers } from './ngrx/reducers';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { isDevMode } from '@angular/core';
-import { DatePipe } from "@angular/common";
+import { DatePipe } from '@angular/common';
 
 export const appConfig: ApplicationConfig = {
   providers: [
