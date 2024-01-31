@@ -215,18 +215,18 @@
       "update_date": ""
     },
     {
-      "id": 14,
-      "cate": "Fresh",
       "productName": "Fresh Corn",
+      "productPrice": "18",
       "productImageUrl": "assets/images/products/Fresh_Corn.png",
       "productPriceSale": 20,
-      "productPrice": 17,
       "productRating": 5,
-      "productBuyQuantity": 222,
-      "productViews": 356,
+      "productBuyQuantity": 6654,
+      "productViews": 8900,
       "productDescription": "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+      "cate": "Fresh",
       "release_date": "08/01/2024",
-      "update_date": ""
+      "update_date": "31-01-2024",
+      "id": 14
     },
     {
       "id": 15,

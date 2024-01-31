@@ -28,7 +28,7 @@ export class HttpMethodService {
 
   put(path: string, body: Object = {}): Observable<any> {
     return this.http
-      .put(path, JSON.stringify(body), this.httpOptions)
+      .patch(path, JSON.stringify(body), this.httpOptions)
       .pipe(catchError(this.formatErrors));
   }
 

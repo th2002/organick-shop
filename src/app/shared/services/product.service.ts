@@ -20,7 +20,7 @@ export class ProductService {
     return this.httpMethod.post(this.product_url, product_dto);
   }
 
-  singleProduct(id: number) {
+  singleProduct(id: number): Observable<any> {
     return this.httpMethod.get(this.product_url + id);
   }
   updateProduct(id: number, product_dto: iProduct): Observable<any> {
