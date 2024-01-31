@@ -21,6 +21,8 @@ import { ProductsCrudComponent } from '@admin/components/products-crud/products-
 import { UsersCrudComponent } from '@admin/components/users-crud/users-crud.component';
 import { AddProductComponent } from '@admin/components/products-crud/add-product/add-product.component';
 import { EditProductComponent } from '@admin/components/products-crud/edit-product/edit-product.component';
+import { OderCrudComponent } from "@admin/components/oder-crud/oder-crud.component";
+import { OderDetailComponent } from "@admin/components/oder-detail/oder-detail.component";
 
 export const routes: Routes = [
   // Admin dashboard layout
@@ -31,6 +33,8 @@ export const routes: Routes = [
     children: [
       { path: '', component: AdminDashboardComponent },
       { path: 'products', component: ProductsCrudComponent },
+      { path: 'oder', component: OderCrudComponent },
+      { path: 'oder/:id', component: OderDetailComponent },
       {
         path: 'crud',
         children: [

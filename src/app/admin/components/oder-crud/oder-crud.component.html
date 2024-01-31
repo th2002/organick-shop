@@ -1,0 +1,34 @@
+<div class="tw-pb-10">
+  <h1 class="tw-text-2xl uppercase tw-tracking-widest">Manage Oder</h1>
+  <div class="card tw-border-[1px] tw-rounded-2xl tw-overflow-hidden tw-mt-10">
+    <p-table
+      [value]="invoices"
+      [tableStyle]="{'min-width': '50rem'}"
+      [paginator]="true"
+      [rows]="5"
+      [showCurrentPageReport]="true"
+      currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+    >
+      <ng-template pTemplate="header" let-columns>
+        <tr>
+          <th>ID</th>
+          <th>Customer</th>
+          <th>Date</th>
+          <th>Total</th>
+          <th>Status</th>
+          <th></th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-invoice let-columns="columns">
+        <tr>
+          <td>{{invoice.id}}</td>
+          <td>{{invoice.customer.name}}</td>
+          <td>{{invoice.date}}</td>
+          <td>{{invoice.total | currency:'USD'}}</td>
+          <td><p-tag [value]="invoice.status" [severity]="getSeverity(invoice.status)"></p-tag></td>
+          <td><p-button (click)="navigate_detail(invoice.id)" size="small" label="Detail" severity="info"></p-button></td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>
