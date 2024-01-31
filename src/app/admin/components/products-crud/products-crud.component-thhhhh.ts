@@ -35,11 +35,16 @@ export class ProductsCrudComponent implements OnInit {
     private prd_service: ProductService,
     private messageService: MessageService,
     private router: Router
-  ) {
+    ) {
   }
 
   ngOnInit() {
-    this.handle_get_all_prd()
+    this.prd_service
+      .allProduct()
+      .subscribe(data => {
+        this.products = data;
+        this.loading = false
+      })
   }
 
   naviagte_add_prd() {
@@ -50,31 +55,10 @@ export class ProductsCrudComponent implements OnInit {
     this.router.navigate(['/dashboard/crud/edit-prd/' + id])
   }
 
-  handle_get_all_prd() {
-    this.prd_service
-      .allProduct()
-      .subscribe(data => {
-        const data_sorted = data.sort((a: iProduct, b: iProduct) => {
-          const a_id = a.id
-          const b_id = b.id
-          return b_id - a_id;
-        })
-        this.products = data_sorted;
-        this.loading = false
-      })
-  }
-
   handle_delete_prd(id: number) {
     this.prd_service
       .deleteProduct(id)
-      .subscribe(() => {
-        this.show();
-        this.handle_get_all_prd()
-      })
-  }
-
-  handle_edit_prd(id: number) {
-    this.router.navigate(['/dashboard/crud/edit-prd/' + id])
+      .subscribe(() => this.show())
   }
 
   show() {

@@ -1,1 +1,69 @@
-<p>products-crud works!</p>
+
+<div class="tw-pb-10">
+  <div class="card flex justify-content-start tw-mb-10">
+    <button (click)="naviagte_add_prd()" size="small" pButton pRipple label="New" icon="pi pi-plus" class="p-button-success"></button>
+  </div>
+
+  <div class="card tw-border-[1px] tw-rounded-2xl tw-overflow-hidden">
+    <p-table
+      #dt2
+      dataKey="id"
+      [value]="products"
+      [tableStyle]="{'min-width': '60rem'}"
+      [paginator]="true"
+      [loading]="loading"
+      [rows]="5"
+      [showCurrentPageReport]="true"
+      [globalFilterFields]="['productName', 'cate']"
+      currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+    >
+      <ng-template pTemplate="caption">
+        <div class="flex align-items-center justify-content-between">
+          Products
+          <div class="flex">
+            <span class="p-input-icon-left ml-auto">
+                <i class="pi pi-search"></i>
+                <input pInputText type="text" [(ngModel)]="searchKeyword" (input)="dt2.filterGlobal(searchKeyword, 'contains')" placeholder="Search keyword" />
+            </span>
+          </div>
+        </div>
+        <div class="flex align-items-center justify-content-between">
+          In total there are {{products ? products.length : 0 }} products.
+        </div>
+      </ng-template>
+
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Name</th>
+          <th>Image</th>
+          <th>Price</th>
+          <th>Category</th>
+          <th>Rating</th>
+          <th>Views</th>
+          <th>Buy quantity</th>
+          <th>Release date</th>
+          <th>Update date</th>
+          <th></th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-product>
+        <tr>
+          <td>{{ product.productName }}</td>
+          <td><img [src]="product.productImageUrl" [alt]="product.productName" width="100" class="shadow-4" /></td>
+          <td>{{ product.productPrice | currency:'USD'}}</td>
+          <td>{{ product.cate }}</td>
+          <td><p-rating [ngModel]="product.productRating" [readonly]="true" [cancel]="false"></p-rating></td>
+          <td> {{ product.productViews }} </td>
+          <td> {{ product.productBuyQuantity }} </td>
+          <td> {{ product.release_date }} </td>
+          <td> {{ product.update_date || 'null' }} </td>
+          <td>
+            <p-button (click)="handle_edit_prd(product.id)" class="mr-3" icon="pi pi-pencil" [rounded]="true" severity="success"></p-button>
+            <p-button (click)="handle_delete_prd(product.id)" icon="pi pi-trash" [rounded]="true" severity="warning"></p-button>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+    <p-toast></p-toast>
+  </div>
+</div>

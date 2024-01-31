@@ -1,0 +1,85 @@
+<div class="tw-flex tw-justify-center tw-w-full">
+  <form [formGroup]="productFormGroup" (ngSubmit)="onSubmit(productFormGroup)" class="tw-w-[50%] tw-border-[1px] tw-py-5 tw-px-10 tw-rounded-2xl">
+    <h1 class="tw-text-2xl uppercase tw-tracking-widest">Update product</h1>
+    <div class="tw-flex tw-flex-wrap tw-gap-10 tw-mt-8">
+      <div class="flex justify-content-between w-full">
+        <div class="card flex flex-column justify-content-center tw-w-[48%]">
+          <span class="p-float-label tw-w-full">
+              <input formControlName="productName" class="p-inputtext-sm tw-w-full" pInputText id="productName" />
+              <label for="productName">Name</label>
+          </span>
+          <div
+            class="tw-my-3"
+            *ngIf="
+          productFormGroup.get('productName')?.hasError('required') &&
+          (productFormGroup.get('productName')?.dirty ||
+            productFormGroup.get('productName')?.touched)
+        "
+          >
+            <span class="tw-text-sm tw-font-semibold" style="color: red">Product name is required.</span>
+          </div>
+        </div>
+
+        <div class="card flex flex-column justify-content-center tw-w-[48%]">
+          <span class="p-float-label tw-w-full">
+              <input formControlName="productPrice" class="p-inputtext-sm tw-w-full" pInputText id="price" />
+              <label for="price">Price</label>
+          </span>
+          <div
+            class="tw-my-3"
+            *ngIf="
+          productFormGroup.get('productPrice')?.hasError('required') &&
+          (productFormGroup.get('productPrice')?.dirty ||
+            productFormGroup.get('productPrice')?.touched)
+        "
+          >
+            <span class="tw-text-sm tw-font-semibold" style="color: red">Product price is required.</span>
+          </div>
+        </div>
+      </div>
+      <div class="card flex justify-content-center">
+        <p-dropdown [options]="categories" [(ngModel)]="selectedCate" optionLabel="cateName" [showClear]="true" placeholder="Select a Categories" [ngModelOptions]="{standalone: true}"></p-dropdown>
+      </div>
+      <div class="card flex flex-column justify-content-center w-full">
+        <span class="p-float-label w-full">
+            <input formControlName="productImageUrl" class="p-inputtext-sm w-full" pInputText id="img" />
+            <label for="img">Image</label>
+        </span>
+        <div
+          class="tw-my-3"
+          *ngIf="
+          productFormGroup.get('productImageUrl')?.hasError('required') &&
+          (productFormGroup.get('productImageUrl')?.dirty ||
+            productFormGroup.get('productImageUrl')?.touched)
+        "
+        >
+          <span class="tw-text-sm tw-font-semibold" style="color: red">Product image is required.</span>
+        </div>
+      </div>
+      <div class="flex justify-content-center w-full">
+        <img class="tw-w-[50%] tw-object-cover" [src]="productFormGroup.get('productImageUrl')?.value">
+      </div>
+      <div class="card flex flex-column justify-content-center w-full">
+        <span class="p-float-label w-full">
+            <textarea formControlName="productDescription" class="w-full" id="float-input" rows="5" cols="30" pInputTextarea></textarea>
+            <label for="float-input">Description</label>
+        </span>
+        <div
+          class="tw-my-3"
+          *ngIf="
+          productFormGroup.get('productDescription')?.hasError('required') &&
+          (productFormGroup.get('productDescription')?.dirty ||
+            productFormGroup.get('productDescription')?.touched)
+        "
+        >
+          <span class="tw-text-sm tw-font-semibold" style="color: red">Product description is required.</span>
+        </div>
+      </div>
+    </div>
+    <div class="flex gap-3 justify-content-end mt-4 w-full">
+      <p-button (click)="navigate_prd_list()" label="Cancel" [text]="true" icon="pi pi-times" size="small" severity="secondary"></p-button>
+      <p-button [disabled]="!productFormGroup.valid" type="submit" label="Submit" [text]="true" icon="pi pi-check" size="small" severity="success"></p-button>
+    </div>
+  </form>
+</div>
+
