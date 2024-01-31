@@ -1,22 +1,22 @@
 {
-  "users":[
+  "users": [
     {
-      "id":1,
-      "email":"bruno@email.com",
-      "password":"bruno",
-      "typeUser":0
+      "id": 1,
+      "email": "bruno@email.com",
+      "password": "bruno",
+      "typeUser": 0
     },
     {
-      "id":2,
-      "email":"admin@gmail.com",
-      "password":"123456",
-      "typeUser":1
+      "id": 2,
+      "email": "admin@gmail.com",
+      "password": "123456",
+      "typeUser": 1
     },
     {
-      "id":3,
-      "email":"customer@gmail.com",
-      "password":"123456",
-      "typeUser":0
+      "id": 3,
+      "email": "customer@gmail.com",
+      "password": "123456",
+      "typeUser": 0
     }
   ],
   "categories": [
@@ -271,7 +271,7 @@
           "image": "assets/images/products/Calabrese_Broccoli.png",
           "description": "Product A",
           "quantity": 2,
-          "unitPrice": 50.00
+          "unitPrice": 50
         },
         {
           "productId": "PROD-002",
@@ -279,7 +279,7 @@
           "image": "assets/images/products/Fresh_Banana_Fruites.png",
           "description": "Product B",
           "quantity": 1,
-          "unitPrice": 75.00
+          "unitPrice": 75
         },
         {
           "productId": "PROD-003",
@@ -287,7 +287,7 @@
           "image": "assets/images/products/Mung_Bean.png",
           "description": "Product B",
           "quantity": 3,
-          "unitPrice": 100.00
+          "unitPrice": 100
         },
         {
           "productId": "PROD-004",
@@ -295,7 +295,7 @@
           "image": "assets/images/products/Brown_Hazelnut.png",
           "description": "Product B",
           "quantity": 5,
-          "unitPrice": 200.00
+          "unitPrice": 200
         }
       ],
       "subtotal": 1600,
@@ -318,7 +318,7 @@
           "image": "assets/images/products/Calabrese_Broccoli.png",
           "description": "Product A",
           "quantity": 2,
-          "unitPrice": 50.00
+          "unitPrice": 50
         },
         {
           "productId": "PROD-002",
@@ -326,7 +326,7 @@
           "image": "assets/images/products/Fresh_Banana_Fruites.png",
           "description": "Product B",
           "quantity": 1,
-          "unitPrice": 75.00
+          "unitPrice": 75
         },
         {
           "productId": "PROD-003",
@@ -334,7 +334,7 @@
           "image": "assets/images/products/Mung_Bean.png",
           "description": "Product B",
           "quantity": 3,
-          "unitPrice": 100.00
+          "unitPrice": 100
         },
         {
           "productId": "PROD-004",
@@ -342,7 +342,7 @@
           "image": "assets/images/products/Brown_Hazelnut.png",
           "description": "Product B",
           "quantity": 5,
-          "unitPrice": 200.00
+          "unitPrice": 200
         }
       ],
       "subtotal": 592,
@@ -365,7 +365,7 @@
           "image": "assets/images/products/Calabrese_Broccoli.png",
           "description": "Product A",
           "quantity": 2,
-          "unitPrice": 50.00
+          "unitPrice": 50
         },
         {
           "productId": "PROD-002",
@@ -373,7 +373,7 @@
           "image": "assets/images/products/Fresh_Banana_Fruites.png",
           "description": "Product B",
           "quantity": 1,
-          "unitPrice": 75.00
+          "unitPrice": 75
         },
         {
           "productId": "PROD-003",
@@ -381,7 +381,7 @@
           "image": "assets/images/products/Mung_Bean.png",
           "description": "Product B",
           "quantity": 3,
-          "unitPrice": 100.00
+          "unitPrice": 100
         },
         {
           "productId": "PROD-004",
@@ -389,7 +389,7 @@
           "image": "assets/images/products/Brown_Hazelnut.png",
           "description": "Product B",
           "quantity": 5,
-          "unitPrice": 200.00
+          "unitPrice": 200
         }
       ],
       "subtotal": 1292,
@@ -412,7 +412,7 @@
           "image": "assets/images/products/Calabrese_Broccoli.png",
           "description": "Product A",
           "quantity": 2,
-          "unitPrice": 50.00
+          "unitPrice": 50
         },
         {
           "productId": "PROD-002",
@@ -420,7 +420,7 @@
           "image": "assets/images/products/Fresh_Banana_Fruites.png",
           "description": "Product B",
           "quantity": 1,
-          "unitPrice": 75.00
+          "unitPrice": 75
         },
         {
           "productId": "PROD-003",
@@ -428,7 +428,7 @@
           "image": "assets/images/products/Mung_Bean.png",
           "description": "Product B",
           "quantity": 3,
-          "unitPrice": 100.00
+          "unitPrice": 100
         },
         {
           "productId": "PROD-004",
@@ -436,7 +436,7 @@
           "image": "assets/images/products/Brown_Hazelnut.png",
           "description": "Product B",
           "quantity": 5,
-          "unitPrice": 200.00
+          "unitPrice": 200
         }
       ],
       "subtotal": 1500,
@@ -459,7 +459,7 @@
           "image": "assets/images/products/Calabrese_Broccoli.png",
           "description": "Product A",
           "quantity": 2,
-          "unitPrice": 50.00
+          "unitPrice": 50
         },
         {
           "productId": "PROD-002",
@@ -467,7 +467,7 @@
           "image": "assets/images/products/Fresh_Banana_Fruites.png",
           "description": "Product B",
           "quantity": 1,
-          "unitPrice": 75.00
+          "unitPrice": 75
         },
         {
           "productId": "PROD-003",
@@ -475,7 +475,7 @@
           "image": "assets/images/products/Mung_Bean.png",
           "description": "Product B",
           "quantity": 3,
-          "unitPrice": 100.00
+          "unitPrice": 100
         },
         {
           "productId": "PROD-004",
@@ -483,7 +483,7 @@
           "image": "assets/images/products/Brown_Hazelnut.png",
           "description": "Product B",
           "quantity": 5,
-          "unitPrice": 200.00
+          "unitPrice": 200
         }
       ],
       "subtotal": 900,
@@ -506,7 +506,7 @@
           "image": "assets/images/products/Calabrese_Broccoli.png",
           "description": "Product A",
           "quantity": 2,
-          "unitPrice": 50.00
+          "unitPrice": 50
         },
         {
           "productId": "PROD-002",
@@ -514,7 +514,7 @@
           "image": "assets/images/products/Fresh_Banana_Fruites.png",
           "description": "Product B",
           "quantity": 1,
-          "unitPrice": 75.00
+          "unitPrice": 75
         },
         {
           "productId": "PROD-003",
@@ -522,7 +522,7 @@
           "image": "assets/images/products/Mung_Bean.png",
           "description": "Product B",
           "quantity": 3,
-          "unitPrice": 100.00
+          "unitPrice": 100
         },
         {
           "productId": "PROD-004",
@@ -530,7 +530,7 @@
           "image": "assets/images/products/Brown_Hazelnut.png",
           "description": "Product B",
           "quantity": 5,
-          "unitPrice": 200.00
+          "unitPrice": 200
         }
       ],
       "subtotal": 1800,
@@ -553,7 +553,7 @@
           "image": "assets/images/products/Calabrese_Broccoli.png",
           "description": "Product A",
           "quantity": 2,
-          "unitPrice": 50.00
+          "unitPrice": 50
         },
         {
           "productId": "PROD-002",
@@ -561,7 +561,7 @@
           "image": "assets/images/products/Fresh_Banana_Fruites.png",
           "description": "Product B",
           "quantity": 1,
-          "unitPrice": 75.00
+          "unitPrice": 75
         },
         {
           "productId": "PROD-003",
@@ -569,7 +569,7 @@
           "image": "assets/images/products/Mung_Bean.png",
           "description": "Product B",
           "quantity": 3,
-          "unitPrice": 100.00
+          "unitPrice": 100
         },
         {
           "productId": "PROD-004",
@@ -577,7 +577,7 @@
           "image": "assets/images/products/Brown_Hazelnut.png",
           "description": "Product B",
           "quantity": 5,
-          "unitPrice": 200.00
+          "unitPrice": 200
         }
       ],
       "subtotal": 1292,
@@ -600,7 +600,7 @@
           "image": "assets/images/products/Calabrese_Broccoli.png",
           "description": "Product A",
           "quantity": 2,
-          "unitPrice": 50.00
+          "unitPrice": 50
         },
         {
           "productId": "PROD-002",
@@ -608,7 +608,7 @@
           "image": "assets/images/products/Fresh_Banana_Fruites.png",
           "description": "Product B",
           "quantity": 1,
-          "unitPrice": 75.00
+          "unitPrice": 75
         },
         {
           "productId": "PROD-003",
@@ -616,7 +616,7 @@
           "image": "assets/images/products/Mung_Bean.png",
           "description": "Product B",
           "quantity": 3,
-          "unitPrice": 100.00
+          "unitPrice": 100
         },
         {
           "productId": "PROD-004",
@@ -624,7 +624,7 @@
           "image": "assets/images/products/Brown_Hazelnut.png",
           "description": "Product B",
           "quantity": 5,
-          "unitPrice": 200.00
+          "unitPrice": 200
         }
       ],
       "subtotal": 920,
@@ -647,7 +647,7 @@
           "image": "assets/images/products/Calabrese_Broccoli.png",
           "description": "Product A",
           "quantity": 2,
-          "unitPrice": 50.00
+          "unitPrice": 50
         },
         {
           "productId": "PROD-002",
@@ -655,7 +655,7 @@
           "image": "assets/images/products/Fresh_Banana_Fruites.png",
           "description": "Product B",
           "quantity": 1,
-          "unitPrice": 75.00
+          "unitPrice": 75
         },
         {
           "productId": "PROD-003",
@@ -663,7 +663,7 @@
           "image": "assets/images/products/Mung_Bean.png",
           "description": "Product B",
           "quantity": 3,
-          "unitPrice": 100.00
+          "unitPrice": 100
         },
         {
           "productId": "PROD-004",
@@ -671,7 +671,7 @@
           "image": "assets/images/products/Brown_Hazelnut.png",
           "description": "Product B",
           "quantity": 5,
-          "unitPrice": 200.00
+          "unitPrice": 200
         }
       ],
       "subtotal": 1000,
@@ -694,7 +694,7 @@
           "image": "assets/images/products/Calabrese_Broccoli.png",
           "description": "Product A",
           "quantity": 2,
-          "unitPrice": 50.00
+          "unitPrice": 50
         },
         {
           "productId": "PROD-002",
@@ -702,7 +702,7 @@
           "image": "assets/images/products/Fresh_Banana_Fruites.png",
           "description": "Product B",
           "quantity": 1,
-          "unitPrice": 75.00
+          "unitPrice": 75
         },
         {
           "productId": "PROD-003",
@@ -710,7 +710,7 @@
           "image": "assets/images/products/Mung_Bean.png",
           "description": "Product B",
           "quantity": 3,
-          "unitPrice": 100.00
+          "unitPrice": 100
         },
         {
           "productId": "PROD-004",
@@ -718,7 +718,7 @@
           "image": "assets/images/products/Brown_Hazelnut.png",
           "description": "Product B",
           "quantity": 5,
-          "unitPrice": 200.00
+          "unitPrice": 200
         }
       ],
       "subtotal": 1800,
@@ -741,7 +741,7 @@
           "image": "assets/images/products/Calabrese_Broccoli.png",
           "description": "Product A",
           "quantity": 2,
-          "unitPrice": 50.00
+          "unitPrice": 50
         },
         {
           "productId": "PROD-002",
@@ -749,7 +749,7 @@
           "image": "assets/images/products/Fresh_Banana_Fruites.png",
           "description": "Product B",
           "quantity": 1,
-          "unitPrice": 75.00
+          "unitPrice": 75
         },
         {
           "productId": "PROD-003",
@@ -757,7 +757,7 @@
           "image": "assets/images/products/Mung_Bean.png",
           "description": "Product B",
           "quantity": 3,
-          "unitPrice": 100.00
+          "unitPrice": 100
         },
         {
           "productId": "PROD-004",
@@ -765,7 +765,7 @@
           "image": "assets/images/products/Brown_Hazelnut.png",
           "description": "Product B",
           "quantity": 5,
-          "unitPrice": 200.00
+          "unitPrice": 200
         }
       ],
       "subtotal": 700,
@@ -788,7 +788,7 @@
           "image": "assets/images/products/Calabrese_Broccoli.png",
           "description": "Product A",
           "quantity": 2,
-          "unitPrice": 50.00
+          "unitPrice": 50
         },
         {
           "productId": "PROD-002",
@@ -796,7 +796,7 @@
           "image": "assets/images/products/Fresh_Banana_Fruites.png",
           "description": "Product B",
           "quantity": 1,
-          "unitPrice": 75.00
+          "unitPrice": 75
         },
         {
           "productId": "PROD-003",
@@ -804,7 +804,7 @@
           "image": "assets/images/products/Mung_Bean.png",
           "description": "Product B",
           "quantity": 3,
-          "unitPrice": 100.00
+          "unitPrice": 100
         },
         {
           "productId": "PROD-004",
@@ -812,7 +812,7 @@
           "image": "assets/images/products/Brown_Hazelnut.png",
           "description": "Product B",
           "quantity": 5,
-          "unitPrice": 200.00
+          "unitPrice": 200
         }
       ],
       "subtotal": 600,
@@ -835,7 +835,7 @@
           "image": "assets/images/products/Calabrese_Broccoli.png",
           "description": "Product A",
           "quantity": 2,
-          "unitPrice": 50.00
+          "unitPrice": 50
         },
         {
           "productId": "PROD-002",
@@ -843,7 +843,7 @@
           "image": "assets/images/products/Fresh_Banana_Fruites.png",
           "description": "Product B",
           "quantity": 1,
-          "unitPrice": 75.00
+          "unitPrice": 75
         },
         {
           "productId": "PROD-003",
@@ -851,7 +851,7 @@
           "image": "assets/images/products/Mung_Bean.png",
           "description": "Product B",
           "quantity": 3,
-          "unitPrice": 100.00
+          "unitPrice": 100
         },
         {
           "productId": "PROD-004",
@@ -859,7 +859,7 @@
           "image": "assets/images/products/Brown_Hazelnut.png",
           "description": "Product B",
           "quantity": 5,
-          "unitPrice": 200.00
+          "unitPrice": 200
         }
       ],
       "subtotal": 1292,
@@ -882,7 +882,7 @@
           "image": "assets/images/products/Calabrese_Broccoli.png",
           "description": "Product A",
           "quantity": 2,
-          "unitPrice": 50.00
+          "unitPrice": 50
         },
         {
           "productId": "PROD-002",
@@ -890,7 +890,7 @@
           "image": "assets/images/products/Fresh_Banana_Fruites.png",
           "description": "Product B",
           "quantity": 1,
-          "unitPrice": 75.00
+          "unitPrice": 75
         },
         {
           "productId": "PROD-003",
@@ -898,7 +898,7 @@
           "image": "assets/images/products/Mung_Bean.png",
           "description": "Product B",
           "quantity": 3,
-          "unitPrice": 100.00
+          "unitPrice": 100
         },
         {
           "productId": "PROD-004",
@@ -906,7 +906,7 @@
           "image": "assets/images/products/Brown_Hazelnut.png",
           "description": "Product B",
           "quantity": 5,
-          "unitPrice": 200.00
+          "unitPrice": 200
         }
       ],
       "subtotal": 1500,
@@ -929,7 +929,7 @@
           "image": "assets/images/products/Calabrese_Broccoli.png",
           "description": "Product A",
           "quantity": 2,
-          "unitPrice": 50.00
+          "unitPrice": 50
         },
         {
           "productId": "PROD-002",
@@ -937,7 +937,7 @@
           "image": "assets/images/products/Fresh_Banana_Fruites.png",
           "description": "Product B",
           "quantity": 1,
-          "unitPrice": 75.00
+          "unitPrice": 75
         },
         {
           "productId": "PROD-003",
@@ -945,7 +945,7 @@
           "image": "assets/images/products/Mung_Bean.png",
           "description": "Product B",
           "quantity": 3,
-          "unitPrice": 100.00
+          "unitPrice": 100
         },
         {
           "productId": "PROD-004",
@@ -953,7 +953,7 @@
           "image": "assets/images/products/Brown_Hazelnut.png",
           "description": "Product B",
           "quantity": 5,
-          "unitPrice": 200.00
+          "unitPrice": 200
         }
       ],
       "subtotal": 500,
@@ -976,7 +976,7 @@
           "image": "assets/images/products/Calabrese_Broccoli.png",
           "description": "Product A",
           "quantity": 2,
-          "unitPrice": 50.00
+          "unitPrice": 50
         },
         {
           "productId": "PROD-002",
@@ -984,7 +984,7 @@
           "image": "assets/images/products/Fresh_Banana_Fruites.png",
           "description": "Product B",
           "quantity": 1,
-          "unitPrice": 75.00
+          "unitPrice": 75
         },
         {
           "productId": "PROD-003",
@@ -992,7 +992,7 @@
           "image": "assets/images/products/Mung_Bean.png",
           "description": "Product B",
           "quantity": 3,
-          "unitPrice": 100.00
+          "unitPrice": 100
         },
         {
           "productId": "PROD-004",
@@ -1000,7 +1000,7 @@
           "image": "assets/images/products/Brown_Hazelnut.png",
           "description": "Product B",
           "quantity": 5,
-          "unitPrice": 200.00
+          "unitPrice": 200
         }
       ],
       "subtotal": 200,
@@ -1023,7 +1023,7 @@
           "image": "assets/images/products/Calabrese_Broccoli.png",
           "description": "Product A",
           "quantity": 2,
-          "unitPrice": 50.00
+          "unitPrice": 50
         },
         {
           "productId": "PROD-002",
@@ -1031,7 +1031,7 @@
           "image": "assets/images/products/Fresh_Banana_Fruites.png",
           "description": "Product B",
           "quantity": 1,
-          "unitPrice": 75.00
+          "unitPrice": 75
         },
         {
           "productId": "PROD-003",
@@ -1039,7 +1039,7 @@
           "image": "assets/images/products/Mung_Bean.png",
           "description": "Product B",
           "quantity": 3,
-          "unitPrice": 100.00
+          "unitPrice": 100
         },
         {
           "productId": "PROD-004",
@@ -1047,7 +1047,7 @@
           "image": "assets/images/products/Brown_Hazelnut.png",
           "description": "Product B",
           "quantity": 5,
-          "unitPrice": 200.00
+          "unitPrice": 200
         }
       ],
       "subtotal": 100,
@@ -1070,7 +1070,7 @@
           "image": "assets/images/products/Calabrese_Broccoli.png",
           "description": "Product A",
           "quantity": 2,
-          "unitPrice": 50.00
+          "unitPrice": 50
         },
         {
           "productId": "PROD-002",
@@ -1078,7 +1078,7 @@
           "image": "assets/images/products/Fresh_Banana_Fruites.png",
           "description": "Product B",
           "quantity": 1,
-          "unitPrice": 75.00
+          "unitPrice": 75
         },
         {
           "productId": "PROD-003",
@@ -1086,7 +1086,7 @@
           "image": "assets/images/products/Mung_Bean.png",
           "description": "Product B",
           "quantity": 3,
-          "unitPrice": 100.00
+          "unitPrice": 100
         },
         {
           "productId": "PROD-004",
@@ -1094,7 +1094,7 @@
           "image": "assets/images/products/Brown_Hazelnut.png",
           "description": "Product B",
           "quantity": 5,
-          "unitPrice": 200.00
+          "unitPrice": 200
         }
       ],
       "subtotal": 100,
@@ -1117,7 +1117,7 @@
           "image": "assets/images/products/Calabrese_Broccoli.png",
           "description": "Product A",
           "quantity": 2,
-          "unitPrice": 50.00
+          "unitPrice": 50
         },
         {
           "productId": "PROD-002",
@@ -1125,7 +1125,7 @@
           "image": "assets/images/products/Fresh_Banana_Fruites.png",
           "description": "Product B",
           "quantity": 1,
-          "unitPrice": 75.00
+          "unitPrice": 75
         },
         {
           "productId": "PROD-003",
@@ -1133,7 +1133,7 @@
           "image": "assets/images/products/Mung_Bean.png",
           "description": "Product B",
           "quantity": 3,
-          "unitPrice": 100.00
+          "unitPrice": 100
         },
         {
           "productId": "PROD-004",
@@ -1141,7 +1141,7 @@
           "image": "assets/images/products/Brown_Hazelnut.png",
           "description": "Product B",
           "quantity": 5,
-          "unitPrice": 200.00
+          "unitPrice": 200
         }
       ],
       "subtotal": 100,
@@ -1164,7 +1164,7 @@
           "image": "assets/images/products/Calabrese_Broccoli.png",
           "description": "Product A",
           "quantity": 2,
-          "unitPrice": 50.00
+          "unitPrice": 50
         },
         {
           "productId": "PROD-002",
@@ -1172,7 +1172,7 @@
           "image": "assets/images/products/Fresh_Banana_Fruites.png",
           "description": "Product B",
           "quantity": 1,
-          "unitPrice": 75.00
+          "unitPrice": 75
         },
         {
           "productId": "PROD-003",
@@ -1180,7 +1180,7 @@
           "image": "assets/images/products/Mung_Bean.png",
           "description": "Product B",
           "quantity": 3,
-          "unitPrice": 100.00
+          "unitPrice": 100
         },
         {
           "productId": "PROD-004",
@@ -1188,7 +1188,7 @@
           "image": "assets/images/products/Brown_Hazelnut.png",
           "description": "Product B",
           "quantity": 5,
-          "unitPrice": 200.00
+          "unitPrice": 200
         }
       ],
       "subtotal": 100,
@@ -1211,7 +1211,7 @@
           "image": "assets/images/products/Calabrese_Broccoli.png",
           "description": "Product A",
           "quantity": 2,
-          "unitPrice": 50.00
+          "unitPrice": 50
         },
         {
           "productId": "PROD-002",
@@ -1219,7 +1219,7 @@
           "image": "assets/images/products/Fresh_Banana_Fruites.png",
           "description": "Product B",
           "quantity": 1,
-          "unitPrice": 75.00
+          "unitPrice": 75
         },
         {
           "productId": "PROD-003",
@@ -1227,7 +1227,7 @@
           "image": "assets/images/products/Mung_Bean.png",
           "description": "Product B",
           "quantity": 3,
-          "unitPrice": 100.00
+          "unitPrice": 100
         },
         {
           "productId": "PROD-004",
@@ -1235,7 +1235,7 @@
           "image": "assets/images/products/Brown_Hazelnut.png",
           "description": "Product B",
           "quantity": 5,
-          "unitPrice": 200.00
+          "unitPrice": 200
         }
       ],
       "subtotal": 100,
@@ -1258,7 +1258,7 @@
           "image": "assets/images/products/Calabrese_Broccoli.png",
           "description": "Product A",
           "quantity": 2,
-          "unitPrice": 50.00
+          "unitPrice": 50
         },
         {
           "productId": "PROD-002",
@@ -1266,7 +1266,7 @@
           "image": "assets/images/products/Fresh_Banana_Fruites.png",
           "description": "Product B",
           "quantity": 1,
-          "unitPrice": 75.00
+          "unitPrice": 75
         },
         {
           "productId": "PROD-003",
@@ -1274,7 +1274,7 @@
           "image": "assets/images/products/Mung_Bean.png",
           "description": "Product B",
           "quantity": 3,
-          "unitPrice": 100.00
+          "unitPrice": 100
         },
         {
           "productId": "PROD-004",
@@ -1282,7 +1282,7 @@
           "image": "assets/images/products/Brown_Hazelnut.png",
           "description": "Product B",
           "quantity": 5,
-          "unitPrice": 200.00
+          "unitPrice": 200
         }
       ],
       "subtotal": 100,
@@ -1305,7 +1305,7 @@
           "image": "assets/images/products/Calabrese_Broccoli.png",
           "description": "Product A",
           "quantity": 2,
-          "unitPrice": 50.00
+          "unitPrice": 50
         },
         {
           "productId": "PROD-002",
@@ -1313,7 +1313,7 @@
           "image": "assets/images/products/Fresh_Banana_Fruites.png",
           "description": "Product B",
           "quantity": 1,
-          "unitPrice": 75.00
+          "unitPrice": 75
         },
         {
           "productId": "PROD-003",
@@ -1321,7 +1321,7 @@
           "image": "assets/images/products/Mung_Bean.png",
           "description": "Product B",
           "quantity": 3,
-          "unitPrice": 100.00
+          "unitPrice": 100
         },
         {
           "productId": "PROD-004",
@@ -1329,7 +1329,7 @@
           "image": "assets/images/products/Brown_Hazelnut.png",
           "description": "Product B",
           "quantity": 5,
-          "unitPrice": 200.00
+          "unitPrice": 200
         }
       ],
       "subtotal": 100,
@@ -1352,7 +1352,7 @@
           "image": "assets/images/products/Calabrese_Broccoli.png",
           "description": "Product A",
           "quantity": 2,
-          "unitPrice": 50.00
+          "unitPrice": 50
         },
         {
           "productId": "PROD-002",
@@ -1360,7 +1360,7 @@
           "image": "assets/images/products/Fresh_Banana_Fruites.png",
           "description": "Product B",
           "quantity": 1,
-          "unitPrice": 75.00
+          "unitPrice": 75
         },
         {
           "productId": "PROD-003",
@@ -1368,7 +1368,7 @@
           "image": "assets/images/products/Mung_Bean.png",
           "description": "Product B",
           "quantity": 3,
-          "unitPrice": 100.00
+          "unitPrice": 100
         },
         {
           "productId": "PROD-004",
@@ -1376,7 +1376,7 @@
           "image": "assets/images/products/Brown_Hazelnut.png",
           "description": "Product B",
           "quantity": 5,
-          "unitPrice": 200.00
+          "unitPrice": 200
         }
       ],
       "subtotal": 100,
@@ -1399,7 +1399,7 @@
           "image": "assets/images/products/Calabrese_Broccoli.png",
           "description": "Product A",
           "quantity": 2,
-          "unitPrice": 50.00
+          "unitPrice": 50
         },
         {
           "productId": "PROD-002",
@@ -1407,7 +1407,7 @@
           "image": "assets/images/products/Fresh_Banana_Fruites.png",
           "description": "Product B",
           "quantity": 1,
-          "unitPrice": 75.00
+          "unitPrice": 75
         },
         {
           "productId": "PROD-003",
@@ -1415,7 +1415,7 @@
           "image": "assets/images/products/Mung_Bean.png",
           "description": "Product B",
           "quantity": 3,
-          "unitPrice": 100.00
+          "unitPrice": 100
         },
         {
           "productId": "PROD-004",
@@ -1423,7 +1423,7 @@
           "image": "assets/images/products/Brown_Hazelnut.png",
           "description": "Product B",
           "quantity": 5,
-          "unitPrice": 200.00
+          "unitPrice": 200
         }
       ],
       "subtotal": 100,
@@ -1446,7 +1446,7 @@
           "image": "assets/images/products/Calabrese_Broccoli.png",
           "description": "Product A",
           "quantity": 2,
-          "unitPrice": 50.00
+          "unitPrice": 50
         },
         {
           "productId": "PROD-002",
@@ -1454,7 +1454,7 @@
           "image": "assets/images/products/Fresh_Banana_Fruites.png",
           "description": "Product B",
           "quantity": 1,
-          "unitPrice": 75.00
+          "unitPrice": 75
         },
         {
           "productId": "PROD-003",
@@ -1462,7 +1462,7 @@
           "image": "assets/images/products/Mung_Bean.png",
           "description": "Product B",
           "quantity": 3,
-          "unitPrice": 100.00
+          "unitPrice": 100
         },
         {
           "productId": "PROD-004",
@@ -1470,7 +1470,7 @@
           "image": "assets/images/products/Brown_Hazelnut.png",
           "description": "Product B",
           "quantity": 5,
-          "unitPrice": 200.00
+          "unitPrice": 200
         }
       ],
       "subtotal": 100,
@@ -1493,7 +1493,7 @@
           "image": "assets/images/products/Calabrese_Broccoli.png",
           "description": "Product A",
           "quantity": 2,
-          "unitPrice": 50.00
+          "unitPrice": 50
         },
         {
           "productId": "PROD-002",
@@ -1501,7 +1501,7 @@
           "image": "assets/images/products/Fresh_Banana_Fruites.png",
           "description": "Product B",
           "quantity": 1,
-          "unitPrice": 75.00
+          "unitPrice": 75
         },
         {
           "productId": "PROD-003",
@@ -1509,7 +1509,7 @@
           "image": "assets/images/products/Mung_Bean.png",
           "description": "Product B",
           "quantity": 3,
-          "unitPrice": 100.00
+          "unitPrice": 100
         },
         {
           "productId": "PROD-004",
@@ -1517,11 +1517,95 @@
           "image": "assets/images/products/Brown_Hazelnut.png",
           "description": "Product B",
           "quantity": 5,
-          "unitPrice": 200.00
+          "unitPrice": 200
         }
       ],
       "subtotal": 100,
       "total": 100
+    },
+    {
+      "date": "01-02-2024",
+      "status": "Delivering",
+      "customer": {
+        "name": "Alex",
+        "email": "alex@gmail.com",
+        "address": "Washinton"
+      },
+      "items": [
+        {
+          "productId": "",
+          "cate": "Vegetable",
+          "image": "assets/images/products/Calabrese_Broccoli.png",
+          "quantity": 2,
+          "unitPrice": 26
+        },
+        {
+          "productId": "",
+          "cate": "Fresh",
+          "image": "assets/images/products/Fresh_Banana_Fruites.png",
+          "quantity": 12,
+          "unitPrice": 168
+        },
+        {
+          "productId": "",
+          "cate": "Fresh",
+          "image": "assets/images/products/Eggs.png",
+          "quantity": 5,
+          "unitPrice": 85
+        },
+        {
+          "productId": "",
+          "cate": "Fresh",
+          "image": "assets/images/products/Zelco_Suji_Elaichi_Rusk.png",
+          "quantity": 4,
+          "unitPrice": 52
+        }
+      ],
+      "subtotal": 331,
+      "total": 331,
+      "id": 28
+    },
+    {
+      "date": "01-02-2024",
+      "status": "Delivering",
+      "customer": {
+        "name": "Linda",
+        "email": "linda@gmail.com",
+        "address": "Singapo"
+      },
+      "items": [
+        {
+          "productId": "",
+          "cate": "Vegetable",
+          "image": "assets/images/products/Calabrese_Broccoli.png",
+          "quantity": 2,
+          "unitPrice": 26
+        },
+        {
+          "productId": "",
+          "cate": "Fresh",
+          "image": "assets/images/products/Fresh_Banana_Fruites.png",
+          "quantity": 12,
+          "unitPrice": 168
+        },
+        {
+          "productId": "",
+          "cate": "Fresh",
+          "image": "assets/images/products/Eggs.png",
+          "quantity": 5,
+          "unitPrice": 85
+        },
+        {
+          "productId": "",
+          "cate": "Fresh",
+          "image": "assets/images/products/Zelco_Suji_Elaichi_Rusk.png",
+          "quantity": 4,
+          "unitPrice": 52
+        }
+      ],
+      "subtotal": 331,
+      "total": 331,
+      "id": 29
     }
   ]
 }

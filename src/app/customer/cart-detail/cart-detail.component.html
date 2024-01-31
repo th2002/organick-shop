@@ -93,6 +93,7 @@
       <span>{{ total_cart | currency: 'USD' }}</span>
     </div>
     <button
+      (click)="navigate_to_checkout()"
       class="tw-h-[50px] tw-w-full tw-rounded-full tw-bg-primary tw-font-semibold tw-text-[#ffffff] hover:tw-bg-opacity-75"
     >
       Proceed to checkout

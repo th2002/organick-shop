@@ -15,6 +15,7 @@ import { selectProductsCart } from '~/ngrx/selectors/cart.selectors';
 import { CartService } from '~/shared/services/cart.service';
 import { cartAction } from '~/ngrx/actions/cart.actions';
 import { IProductCart } from '~/interfaces/i-product-cart';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-cart-detail',
@@ -43,7 +44,7 @@ export class CartDetailComponent implements OnInit {
   private store = inject(Store);
   total_cart: number = 0;
 
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService, private router: Router) {}
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   products$!: Observable<any[]>;
 
@@ -90,5 +91,9 @@ export class CartDetailComponent implements OnInit {
     );
 
     this.store.dispatch(cartAction.updateCartTotal({ total }));
+  }
+
+  navigate_to_checkout() {
+    this.router.navigate(['/payment'])
   }
 }

@@ -1,1 +1,98 @@
-<p>payment works!</p>
+<app-banner-page
+  [name_page]="title"
+  [background_url]="background_url"
+  [pattern_url]="pattern_url"
+/>
+
+<app-breadcrumb [items]="slug" />
+
+<div class="tw-mt-8 tw-flex tw-flex-row tw-justify-center tw-gap-6">
+  <div class="tw-flex tw-flex-col tw-gap-10 tw-w-[650px]">
+    <h1 class="tw-text-xl tw-tracking-widest">Your Information</h1>
+    <div class="card">
+      <span class="p-float-label w-full">
+          <input class="w-full" pInputText id="username" [(ngModel)]="invoice.customer.name" />
+          <label for="username">Username</label>
+      </span>
+    </div>
+    <div class="card">
+      <span class="p-float-label w-full">
+          <input class="w-full" pInputText id="email" [(ngModel)]="invoice.customer.email" />
+          <label for="email">Email</label>
+      </span>
+    </div>
+    <div class="card">
+      <span class="p-float-label w-full">
+          <input class="w-full" pInputText id="address" [(ngModel)]="invoice.customer.address" />
+          <label for="address">Address</label>
+      </span>
+    </div>
+  </div>
+  <div>
+    <div class="card">
+      <p-table
+        *ngIf="products$ | async as products"
+        [value]="products"
+        [tableStyle]="{ 'min-width': '650px' }"
+      >
+        <ng-template pTemplate="header">
+          <tr
+            class="tw-text-sm tw-tracking-[0.42px] tw-text-simple *:tw-uppercase"
+          >
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Unit price</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+          <tr>
+            <td class="tw-flex tw-flex-row tw-items-center tw-gap-5">
+              <img
+                src="{{ product.img }}"
+                alt="product"
+                class="tw-h-[100px] tw-w-[100px]"
+              />
+              <span>{{ product.name }}</span>
+            </td>
+            <td>{{ product.price | currency: 'USD' }}</td>
+            <td>
+              {{ product.quantity }}
+            </td>
+            <td>{{ product.price * product.quantity | currency: 'USD' }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </div>
+  <div
+    class="tw-h-[320px] tw-w-[390px] tw-rounded-lg tw-border-[1px] tw-border-background-300 tw-p-6"
+  >
+    <h1 class="tw-text-xl tw-font-semibold">Cart Total</h1>
+    <div class="tw-flex tw-w-full tw-flex-row tw-justify-between tw-py-5">
+      <h2 class="tw-text-sm tw-text-simple">Subtotal</h2>
+      <span>{{ total_cart | currency: 'USD' }}</span>
+    </div>
+    <div
+      class="tw-flex tw-w-full tw-flex-row tw-justify-between tw-border-b-[1px] tw-border-t-[1px] tw-border-background-300 tw-py-5"
+    >
+      <h2 class="tw-text-sm tw-text-simple">Shipping</h2>
+      <span>Free</span>
+    </div>
+    <div
+      class="tw-flex tw-w-full tw-flex-row tw-justify-between tw-py-5 tw-text-base tw-font-semibold"
+    >
+      <h2 class="tw-text-simple">Total</h2>
+      <span>{{ total_cart | currency: 'USD' }}</span>
+    </div>
+    <button
+      (click)="onCheckout()"
+      class="tw-h-[50px] tw-w-full tw-rounded-full tw-bg-primary tw-font-semibold tw-text-[#ffffff] hover:tw-bg-opacity-75"
+    >
+      Checkout
+    </button>
+  </div>
+  <p-toast></p-toast>
+</div>
+
+<app-banner-subscribe />
